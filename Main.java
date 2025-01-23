@@ -7,7 +7,8 @@ public class Main {
     public static void main(String[] args) {
         // Create AccountManager and AuthenticationService
         AccountManager accountManager = new AccountManager();
-        AuthenticationService authService = new AuthenticationService(accountManager);
+        CalendarManager calendarManager = new CalendarManager();
+        AuthenticationService authService = new AuthenticationService(accountManager,calendarManager);
 
         // Create a user and register
         User user = new User("U1", "John Doe", "john@example.com","abc$12");
